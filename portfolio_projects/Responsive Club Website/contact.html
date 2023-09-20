@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <heaader>
+        <div class="navigation">       
+            <ul class="logo-container">
+                <li><img src="img\logo.png"></li>
+                <li id="company-name">Tree of Life Cosmetics</li>
+            </ul>
+            <ul class="navigation-container">  
+                <li><a href="#">About Us</a></li>
+                <li> <a href="#">Products</a></li>
+                <li><a href="#">Follow Us</a></li>
+            </ul>
+        </div>
+    </heaader>  
+
+    <div class="contact-form">
+
+        <h1 id ="contact_title">Contact Us</h1>
+        
+        <ul>
+            <li><strong>Address:</strong> 123 Book St., Readingville, RX 12345</li>
+            <li><strong>Phone:</strong> (555) 123-4567</li>
+            <li><strong>Email:</strong> LoveReading@TheBookClub.com</li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/bookclub_insta/" target="_blank">@bookclub_insta</a></li>
+        </ul>
+            
+        <h3>Or fill out form below:</h3>
+        <form class="form" action="/submit_contact" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="message_field">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>

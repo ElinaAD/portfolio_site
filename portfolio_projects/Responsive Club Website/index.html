@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Karla:wght@600&family=Lato:ital,wght@0,300;0,400;1,300&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Inknut+Antiqua:wght@300;400&family=Karla:wght@600&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Inknut+Antiqua:wght@300;400&family=Karla:wght@600&family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Bookclub</title>
+</head>
+<body>
+
+
+<!--Header Section-->
+ <header>
+    <ul class="nav-bar">
+       <a href="#"onclick="toggleInfoOnClick('about_us')"><li>About Us</li></a>
+       <a href="#events"><li>Events</li></a> 
+       <a href="#partners"><li>Partners</li></a>
+       <a href="/contact.html"><li>Contact Us</li></a>
+    </ul>
+    
+
+    </header>
+
+ <!--Welcome Banner-->
+
+    <div class="welcome-banner">
+
+        <h3>Welcome to the</h3>
+        <h1>Book Club</h1>
+        <h3> Not an ordinary book club!</h3>
+
+
+    </div>
+
+    <!--Join Button-->
+
+    <div class="join">
+        <a href="#"><h2>Join Now</h2></a>
+    </div>
+
+    <!--About Us section-->
+    <div class="dropdown-content" id="about_us">
+        <h2 >About Us</h2>
+        <p>Welcome to The Book Club where book discussions go beyond the usual coffee shop meetups. From hiking trails and art galleries to local breweries, we bring literature into diverse settings for more engaging conversations and fresh perspectives. This is not your ordinary book club; it's a reading experience designed for those who love books as much as they love exploring new places. Join us, bring your book, and be ready to see literature—and the world—differently.
+
+        </p>
+
+    </div>
+
+    <!--Events Section-->
+
+    <div id="events">
+        
+    <div class="events-title">
+        <h2>Upcoming Events</h2>
+    
+    </div>
+        <div class="events-container">
+            <div class="event-box">
+                <h3>September Apple Picking</h3>
+                <img src="img/apple-picking.jpg" alt="Apple Picking"/>
+                
+                 <h4 onmouseover="toggleInfoOnHover('info1')" onmouseout="toggleInfoOnHover('info1')" onclick="toggleInfoOnClick('info1')">More Information</h4>
+                    <div class="dropdown-content" id="info1">
+                        <p>Join us for a delightful day of apple picking at Orchard Valley Farm! 
+                        Embrace the crisp autumn air, the aroma of freshly fallen leaves, 
+                        and the camaraderie of fellow book lovers.Perfect for families and individuals alike,
+                        this event is more than just harvesting delicious apples—it's about creating lasting memories, 
+                        engaging in thoughtful conversation, and enjoying the simple pleasures of life.  
+                        Refreshments and picnic areas available.
+                        </p>
+                    </div>
+                
+            </div>
+
+            <div class="event-box">
+                <h3>October Loch Lomond Hike</h3>
+                <img src="img/hiking.jpg" alt="Lake Loch Lomond">
+                
+                    <h4 onmouseover="toggleInfoOnHover('info2')" onmouseout="toggleInfoOnHover('info2')" onclick="toggleInfoOnClick('info2')">More Information</h4>
+                <div class="dropdown-content" id="info2">
+                        <p>
+                            Experience the majesty of nature while discussing the latest literary
+                            gems on our Loch Lomond Hike! Traverse scenic trails, 
+                            revel in stunning lake views, and revel in the camaraderie of fellow book enthusiasts.
+                            The serene backdrop of Loch Lomond provides the perfect setting for thoughtful discussion
+                            and peaceful contemplation. Whether you're an avid hiker or new to the trails,
+                            you'll find this outing both invigorating and enlightening. 
+                            Don't forget your hiking boots, a packed lunch, and of course, 
+                            your current read for those moments when you want to sit, relax, and get lost in a good book.
+                        </p>
+
+                </div>
+            </div>
+
+            <div class="event-box">
+                <h3>November Baking Lesson</h3>
+                <img src="img/baking.jpg" alt="Baked Brioch Bread"/>
+                
+                    <h4 onmouseover="toggleInfoOnHover('info3')" onmouseout="toggleInfoOnHover('info3')" onclick="toggleInfoOnClick('info3')">More Information</h4>
+                        <div  class="dropdown-content" id="info3">
+                            <p>Roll up your sleeves for a delightful Book Club Baking Lesson!
+                                Merge your love for literature and the culinary arts as we tackle classic recipes
+                                inspired by our favorite reads. Whether you're a seasoned baker or a complete novice, this interactive event promises fun,
+                                learning, and of course, delicious treats to enjoy. We'll whisk, knead, and chat about the books that have been filling our shelves and hearts.
+                                Don't miss this unique opportunity to bond with fellow book lovers in a cozy, aromatic setting.
+                            </p>
+                        </div>
+               
+            </div>
+           
+        </div>
+
+
+    
+
+    </div>
+    <!--Partner Section-->
+    <div class="partner-title">
+        <h2>Our Partners</h2>
+
+    </div>
+
+    <div class="partner-container">
+
+        <div class="partner-box">
+            <h3>Orchard Valley Farm</h3>
+            <img src="img/farm.jpg" alt="Farm">
+            <h4 onmouseover="toggleInfoOnHover('about1')" onmouseout="toggleInfoOnHover('about1')" onclick="toggleInfoOnClick('about1')">About</h4>
+            <div class="dropdown-content" id="about1">
+                <p>Welcome to Orchard Valley Farm, where apple picking is more than just a seasonal activity—it's a cherished tradition.
+                    Nestled amidst lush landscapes, our farm offers a delightful escape for families, friends,
+                    and anyone looking to relish the bounty of nature. Stroll through rows of apple trees heavy with fruit,
+                    each variety offering its unique flavor and texture. Beyond apples, our farm features picnic areas, a farm-to-table market,
+                    and even seasonal events that make every visit memorable.
+                </p>
+            </div>
+        </div>
+
+        <div class="partner-box" id="partners">
+            <h3>Garland Winery</h3>
+            <img src="img/winery.jpg" alt="Glasses of Wine on Barrel">
+            <h4 onmouseover="toggleInfoOnHover('about2')" onmouseout="toggleInfoOnHover('about2')" onclick="toggleInfoOnClick('about2')">About</h4>
+            <div class="dropdown-content" id="about2">
+                <p>Discover the elegance of vino culture at Garland Winery,
+                    your next destination for a sensory adventure.
+                    Nestled amidst rolling vineyards, our winery offers an unparalleled
+                    experience that combines age-old winemaking traditions with modern flair.
+                    Sample an exquisite selection of handcrafted wines in our inviting tasting room,
+                    where you can delve into the nuances of terroir, aroma, and flavor.
+                    Whether you're a wine aficionado or a casual enthusiast, Garland Winery promises an atmosphere of warmth and sophistication, perfect for meaningful conversations and cherished moments.
+                </p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <h3>The Book Cafe</h3>
+            <img src="img/coffee-cake.jpg" alt="Coffee pot, cup and bread">
+            <h4 onmouseover="toggleInfoOnHover('about3')" onmouseout="toggleInfoOnHover('about3')" onclick="toggleInfoOnClick('about3')">About</h4>
+            <div class="dropdown-content" id="about3">
+                <p>Welcome to The Book Café, where the aroma of freshly brewed coffee meets
+                    the scent of newly printed pages. Nestled in the heart of the city,
+                    our cozy sanctuary offers a unique blend of literary and culinary indulgence.
+                    Browse our extensive collection of books as you sip on artisanal coffee,
+                    indulge in homemade pastries, and engage in enlightening conversations.
+                     With comfy reading nooks and a friendly, knowledgeable staff.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Book of the Month-->
+
+    <div class="book-container">
+
+        <div class="book-box">
+            <h3>Book of the Month </h3>
+            <img src="img/book-month.jfif" alt="The Great Gatsby">
+
+        </div>
+        <div class="reading-box">
+            <h3>For more insparation</h3>
+            <h3>view our</h3>
+           <a href="#"><h2>reading list</h2></a>
+        </div>
+
+    </div>
+
+     <!--Footer Section-->
+
+     <footer class="footer">
+        <h4>Contact Us:</h4>
+        <h4>LoveReading@TheBookClub.com</h4>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

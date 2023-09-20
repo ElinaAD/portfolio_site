@@ -1,0 +1,478 @@
+/*Global Style*/
+
+html { 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/old-books.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    color:rgba(212,175,55,0.8);
+    font-family: 'Quattrocento', serif;
+    
+  }
+
+  h2{
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0, 0.4);
+    text-transform: uppercase;
+  }
+
+
+ a{
+    text-decoration: none;
+    color: rgba(212,175,55,0.8);
+  }
+
+  p{
+    color: rgba(209, 189, 123, 0.8);
+  }
+
+.scale-down img{
+  transform: scale(0.8, 0.8);
+}
+
+#about_us_link {
+  cursor: pointer;
+}
+  /*Header Section*/
+
+  .nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(0,0,0,0.5);
+    color: rgba(212,175,55,0.8);
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    padding-right: 3rem;
+    
+
+  }
+
+  .nav-bar a:hover{
+    text-decoration: none;
+    color: rgba(193, 178, 128, 0.8);
+    font-size: 1.3rem;
+  }
+ 
+
+
+ .nav-bar li{
+
+    text-transform: uppercase;
+    font-family: 'Quattrocento', serif;
+    letter-spacing: 0.1em;
+    
+
+
+ } 
+
+ ul{
+    list-style: none;
+ }
+  
+ @media only screen and (max-width: 560px){
+.nav-bar{
+
+  display: flex;
+  flex-direction: column;
+  background-color:rgba(0,0,0, 0.5) ;
+  height:fit-content ;
+}
+
+.nav-bar li{
+  padding-bottom: 0.5rem;
+}
+
+
+
+ }
+
+ @media only screen and (max-width: 760px)
+ {
+  .nav-bar li{
+    font-size: 1rem;
+  }
+
+
+ }
+
+
+  /*Banner Section*/
+
+ .welcome-banner{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: rgba(212,175,55,0.8);
+    background-color: rgba(0,0,0, 0.1);
+    max-width: 40%;
+    margin: auto;
+   font-family: 'Rye', cursive;
+    
+
+ }
+
+ .welcome-banner h1{
+    margin-top: 0rem;
+    font-size: 4rem;
+    letter-spacing: 0.2em;
+    font-weight: lighter;
+
+ }
+ .welcome-banner h3{
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+
+
+ }
+ @media only screen and (max-width: 460px){
+
+  .welcome-banner h1{
+    font-size: 3rem;
+    
+  }
+  .welcome-banner{
+
+    max-width: 50%;
+  }
+  
+
+ }
+
+ @media only screen and (max-width: 760px)
+ {
+ .welcome-banner h1{
+    font-size: 2.5rem;
+    
+  }
+
+
+ }
+
+  /*Join Now Button*/
+
+
+.join{
+max-width: fit-content;
+margin-top: 5rem;
+margin-bottom: 5rem;
+margin: auto;
+
+ }
+
+.join h2{
+
+  background-color: rgba(0,0,0, 0.8);
+  padding: 2rem 2rem;
+  border-radius: 15px;
+  text-decoration: none;
+  border: 0.5px solid rgba(212,175,55,0.3);
+ }
+
+ .join:hover{
+
+  background-color: rgb(65,117,113);
+  border-radius: 15px;
+
+
+ }
+
+ .join:active{
+
+  background-color: rgb(155, 193, 190);
+  border-radius: 15px;
+  box-shadow: 5px 5px;
+
+ }
+ @media only screen and (max-width: 460px){
+
+  .join{
+    font-size: 1rem;
+  }
+ }
+
+  /*About Us section*/
+
+  #about_us{
+    text-align: center;
+    background-color:rgba(0,0,0, 0.4);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+  }
+  #about_us p{
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+    line-height: 1.5rem;
+  }
+
+   /*Events Section*/
+
+   .events-title h2{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background-color:rgba(0,0,0, 0.4);
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem ;
+    margin-top: 3rem;
+    text-transform: uppercase;
+   
+   }
+
+
+   .events-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+   }
+
+   .event-box{
+    width:30% ;
+    min-width:20rem;
+    padding: 1rem 1rem;
+    background-color: rgba(0,0,0, 0.4);
+    object-fit: cover;
+    margin-bottom: 2rem;
+    position: relative;
+
+
+   }
+
+   .event-box img{
+    display: block;
+    max-width: 100%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+
+  
+   }
+   
+  
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    top: 0; /* Adjust this to position where you want the dropdown to appear */
+    left: 0;
+    width: 100%; /* Take up full width of the parent box */
+    background-color: rgba(0,0,0, 0.4);
+    z-index: 1;
+    line-height: 1.5rem;
+  }  
+  
+ /*Partner Section*/
+
+ .partner-title h2{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background-color:rgba(0,0,0, 0.4);
+    padding: 0.5rem 0.5rem;
+    margin-bottom:1rem ;
+    margin-top: 3rem;
+    text-transform: uppercase;
+ }
+
+ 
+ .partner-container{
+
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+
+ .partner-box{
+  width:30% ;
+  min-width:20rem;
+  padding: 1rem 1rem;
+  background-color: rgba(0,0,0, 0.4);
+  object-fit: cover;
+  margin-bottom: 2rem;
+
+
+ }
+
+ .partner-box img{
+  display: block;
+  max-width: 100%;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+
+
+ }
+
+  /*Book of the month section*/
+
+ .book-container{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3rem;
+
+ }
+
+ .book-box{
+
+width:30% ;
+max-height: 30rem;
+  min-width:20rem;
+  padding: 1rem 1rem;
+  background-color: rgba(0,0,0, 0.4);
+  object-fit: cover;
+ 
+ }
+
+ .reading-box{
+  display:flex;
+  flex-direction: column;
+  width:30% ;
+  align-items: center;
+  text-align: center;
+  max-height: 30rem;
+  min-width:20rem;
+  padding: 1rem 1rem;
+  background-color: rgba(0,0,0, 0.4);
+  font-size: 1.5rem;
+  
+
+ }
+
+ .reading-box a{
+  text-decoration: underline;
+
+ }
+
+ .book-box img{
+  display: block;
+  max-width: 100%;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .footer{
+  display: flex;
+  display: row;
+  background-color: rgba(0,0,0, 0.5);
+  margin-top:1rem;
+  margin-left:0.5rem;
+ }
+
+ .footer h4{
+  padding:0.5rem;
+ }
+
+ /*Contact form page*/
+
+ .contact-form ul{
+     font-size: 1.2rem;
+     padding: 2rem;
+    background-color: rgba(0,0,0, 0.4);
+    line-height: 1.6rem;
+    
+}
+
+ 
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Quattrocento', serif;
+  width: 100%;
+}
+
+
+#contact_title {
+  text-align: center;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid rgba(212,175,55,0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-color: rgba(0,0,0, 0.4);
+}
+
+/* Styling for labels */
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Styling for input fields */
+#name, #email, #message {
+  width: 20rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgba(212,175,55,0.8);
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(212,175,55,0.3);  
+  background-color: rgba(50, 72, 63, 0.4);
+  font-family: 'Quattrocento', serif;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#message {
+  width: 23.8rem;
+  height: 11.5rem;
+}
+
+.message_field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styling for the submit button */
+
+input[type="submit"] {
+  align-self: center; 
+  padding: 1rem 1rem;
+  background-color: rgba(0,0,0, 0.4);
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.8);
+  font-size: 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Quattrocento', serif;
+  border: 0.5px solid rgba(212,175,55,0.3);
+}
+
+input[type="submit"]:hover{
+
+  background-color: rgb(65,117,113);
+}
+
+input[type="submit"]:active{
+  background-color: rgb(155, 193, 190);
+  border-radius: 15px;
+  box-shadow: 5px 5px;
+  color: rgba(212,175,55,0.8);
+}
+
