@@ -9,83 +9,94 @@
 
     <title>Portfolio Website</title>
 </head>
+
 <body class="grid-coantainer">
+
     <!-- Navigation Bar-->
       <div class="nav_bar">
         <button class="nav_bar_toggle">&#9776;</button>
         <ul class="nav_bar_list">
-          <li><a href="#content_home" data-target="#content_home">Home</a></li>
-          <li><a href="#content_about" data-target="#content_about">About</a></li>
-          <li><a href="#content_portfolio" data-target="#content_portfolio">Portfolio</a></li>
-          <li><a href="#content_contact" data-target="#content_contact">Contact</a></li>
+          <a href="#" onclick="displaySection('content_home')"><li>Home</li></a>
+          <a href="#" onclick="displaySection('content_about')"><li>About Me</li></a>
+          <a href="#" onclick="displaySection('content_portfolio')"><li>Projects</li></a>
+          <a href="#" onclick="displaySection('content_contact')"><li>Contact</li></a>
         </ul>
       </div>
   
-  <div class="nav_bar_content">
-
-    <div id="content_home">
-      <div id="profile_img"></div>
-
-      <div class="about_me" id="about_me">
-        <h1>Elina Adams Drake</h1>
-        <h3>Front-end developer</h3>
-      </div> 
-      <div class="skills">
+      <div class="profile_section" id="profile_section">
+        <div class="skills">
           <ul>
-            <li><img src="img_files/kindpng_678384.png"alt="JavaScript Logo"></li>
-            <li><img src="img_files/kindpng_4938086.png" alt="Html Logo"></li>
-            <li><img src="img_files/kindpng_237316.png" alt="CSS Logo"></li>
-            <li><img src="img_files/sql.png"alt="SQL Logo"></li>
+            <li><img src="img_files/html_icon.png" data-src="img_files/html_icon.png" data-hover="img_files/html_icon_hover.png" alt="Html Icon"></li>
+            <li><img src="img_files/css_icon.png" data-src="img_files/css_icon.png" data-hover="img_files/css_icon_hover.png" alt="CSS Icon"></li>
+            <li><img src="img_files/js_icon.png" data-src="img_files/js_icon.png" data-hover="img_files/js_icon_hover.png" alt="JavaScript Icon"></li>
+            <li><img src="img_files/react_icon.png" data-src="img_files/react_icon.png" data-hover="img_files/react_icon_hover.png" alt="React Icon"></li>
+            <li><img src="img_files/sql_icon.png" data-src="img_files/sql_icon.png" data-hover="img_files/sql_icon_hover.png" alt="SQL Icon"></li>
           </ul>
-      </div>
-    </div>
-    <div class="content_about" id="content_about">
-      <p>I'm excited to share my story with you. As a former financial analyst,
-        with a strong desire for a career change, I took on the challenge
-        of self-learning coding while raising my three children.
-        Through sheer determination and hard work, I was able to successfully
-        transition from financial analyst to front-end developer.<br><br>
-  
-        I'm grateful for the opportunity to pursue a career in web development
-        and excited about what the future holds for me.
-        I look forward to contributing my skills and expertise
-        to exciting projects and continuing to grow in my field.
-        Go ahead and explore my portfolio!</p>
-
-        <div id="profile_img"></div>
-    </div>
-    
-      <div id="content_portfolio">
-        <div class="gallery">
-          <div class="slider">
-            <a href="#">
-              <img src="img_files/club_website.JPG" alt="Book Club Website">
-            </a>
-    
-            <a href="#">
-              <img src="img_files/company_website.JPG" alt="Nature Cosmetics company website">
-            </a>
-    
-            <img src="img_files/filler_website.JPG" alt="Image 3">
-          </div>
         </div>
+        <div id="profile_box" >
+          <h1 id="typewriter" class="remove-cursor"></h1>
+          <div id="profile_img"></div>
+          <h2 id="sub-header"></h2>
+        </div>
+       
       </div>
-    
+
+      <!-- Content Section-->
+
+    <div class="conent_container">
+
+      <div class="content_about" id="content_about">
+        <p>Once upon a time, I swapped the comforts of my homeland for the academic towers of Glasgow University, UK. With an MA in Economics and Business Management in tow, I navigated the bustling world of Morgan Stanley, getting firsthand experience in the intriguing realm of stocks.
+          <br>
+          Back in my homeland, I journeyed to EY in Latvia, immersing myself in the art of accounting. Soon after, Citadele Bank beckoned, and there, I shifted gears to become the detective of Anti-Money Laundering analytics. Somewhere between spreadsheets and solving cases, I took on the most challenging role yet: becoming a mom. Word multitasking took on a completely new meaning.
+          <br>
+          But wait! The plot thickened.I dived into the digital depths of HTML, CSS, JavaScript, and React . Now that I have found a knack for breathing life into 1s and 0s, I am eager to mix my flair of talents with a dynamic dev team.
+        </p>
+      </div>
+
       <div id="content_contact">
         <ul>
-          <li><img src="img_files/email.png"alt="Email Icon">elina.a.drake@gmail.com</li>
-          <li><img src="img_files/white-phone-icon-transparent-26.jpg" alt="Phone Icon">+371 2837 9600</li>
-          <li><img src="img_files/linkedin.png" alt="LinkedIn Icon">www.linkedin.com/in/ 
-            elina-adams-drake
-            </li>
+            <li><img src="img_files/email_icon.png"  alt="Email Icon">elina.a.drake@gmail.com</li>
+            <li><img src="img_files/mobile_icon.png"  alt="Phone Icon">+371 2837 9600</li>
+            <a href="www.linkedin.com/in/elina-adams-drake">
+              <li><img src="img_files/linkedin_icon.png"  alt="Linkedin Icon">www.linkedin.com/in/elina-adams-drake</li>
+            </a>
         </ul>
-        <img src="img_files/coding-tree.png" alt="Code Tree">
       </div>
-  </div>
-    
-  <footer class="footer">
-    <p>Copyright © 2023, [Elina Adams Drake]. All rights reserved.</p>
-  </footer>
-    
+
+      <div id="content_home"> 
+        <h4> I am a developer currently under construction ...
+          <br>
+          <br>
+           Thank you for your patience.</h4> 
+      </div>
+
+      <div id="content_portfolio">
+        <div id="project_box">
+          <a><img src="img_files/company_site_1.png" alt="Company Website screenshot"/></a>
+
+          <h3>Tree of Life Project </h3> 
+          <p>The “Tree of Life” project is a versatile and responsive company  site developed as a part of my junior development journey. It is structured with a sample landing page and a product page, both showcasing the diligent application of flexbox technology, ensuring the site’s aesthetic appeal and functionality across diverse devices The development journey involved the implementation of HTML5, CSS3, JavaScript, and Flexbox, focusing on crafting a refined and user-friendly experience. The interactive dynamics powered by JavaScript include on-hover effects, click-based interactions, real-time data fetching for product information, and a captivating image slider animation. 
+            <br>
+            Feel free to browse through the project's <a href="">GitHub Repository</a>
+          </p>
+        </div>
+      
+        <div id="project_box">
+          <a><img src="img_files\book_club_site_2.png" alt="Book Club Website screenshot"/></a>
+          <h3>Book Club Project</h3> 
+          <p>The Book Club project is an interactive and responsive website designed as a unique platform for book enthusiasts. The website is implemented using HTML5, CSS3, Flexbox, and JavaScript, creating a user-friendly and aesthetically pleasing interface that adapts well across a variety of devices. The website features an events section with dynamic dropdowns for more information, a partner section showcasing collaborators, and an inviting contact form page for user inquiries and feedback, each enhancing the user interaction and experience on the site.
+            <br>
+            Explore the detailed functionalities and design intricacies of the project in the <a href="">GitHub Repository</a>
+          </p>
+        </div>
+      
+      </div>
+      
+      
+    </div>
+
     <script src="script.js"></script>
-    
+</body>
+
+  </html>

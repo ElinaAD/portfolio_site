@@ -1,50 +1,105 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.nav_bar_list li a');
-  let currentContent = null; // Keep track of the currently shown content section
-  // Show the "about_me" div and "profile_img" on page load
-  const aboutMeSection = document.getElementById('content_home');
-  aboutMeSection.classList.add('show');
+// Define these variables outside of any function to make them global
+window.onload = function() {
+    document.body.offsetHeight; // force a reflow by accessing offsetHeight
+};
 
-  Array.from(links).forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
+let texts = ["Elina Adams Drake", "Front-end developer"];
+let index = 0;
+let charIndex = 0;
 
-      // Get the ID of the content section that corresponds to the clicked link
-      const contentId = link.dataset.target;
+document.addEventListener('DOMContentLoaded', function() {
+    
 
-      // Hide the previously shown content section, if there is one
-      if (currentContent) {
-        currentContent.classList.remove('show');
-      }
+    // Start typewriter effect after a delay
+    const typewriter = document.getElementById('typewriter');
+    const subHeader = document.getElementById('sub-header');
+    setTimeout(() => type(typewriter, texts, charIndex, index), 200);
 
-      // Hide all other content sections
-      const allContent = document.querySelectorAll('.nav_bar_content');
-      Array.from(allContent).forEach(content => {
-        if (content !== currentContent) {
-          content.classList.remove('show');
-        }
-      });
+    // Initialize skills image animation after a delay
+    let initialDelay = 4000;
+    setTimeout(initializeSkillsAnimation, initialDelay);
+});
 
-      // Hide the "about_me" div and "profile_img" if they're not shown
-      if (contentId) {
-        aboutMeSection.classList.remove('show');
-        const contentHomeSection = document.getElementById('content_home');
-        contentHomeSection.classList.remove('show');
-      }
-
-      // Show the content section that corresponds to the clicked link
-      const contentToShow = document.querySelector(contentId);
-      contentToShow.classList.add('show');
-      currentContent = contentToShow; // Update the currently shown content section
-
-      // Log a message to the console to verify that the code is working as expected
-      console.log(`Clicked link with data-target ${contentId}.`);
+// Navigation Section Display
+function displaySection(sectionId) {
+   
+    let sections = ['content_home', 'content_about', 'content_portfolio', 'content_contact'];
+    
+    sections.forEach(id => {
+        document.getElementById(id).style.display = 'none';
     });
-  });
-  const navBarToggle = document.querySelector('.nav_bar_toggle');
-  const navBarList = document.querySelector('.nav_bar_list');
+    
+    if(sectionId !== 'content_home') {
+        document.getElementById('content_home').style.display = 'none';
+    }
 
-    navBarToggle.addEventListener('click', function() {
-    navBarList.classList.toggle('show');
-  });
+    document.getElementById(sectionId).style.display = 'flex';
+}
+
+
+function type(element, texts, charIndex, index) {
+    if (charIndex < texts[index].length) {
+        element.textContent += texts[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(() => type(element, texts, charIndex, index), 100);
+    } else if (index < texts.length - 1) {
+        let nextElement = element;
+        let delayBeforeNextText = 1500;
+        if(index === 0) {
+            typewriter.classList.add('remove-cursor');
+            nextElement = document.getElementById('sub-header');
+            delayBeforeNextText = 1500;
+        }
+        index++;
+        charIndex = 0;
+        setTimeout(() => type(nextElement, texts, charIndex, index), delayBeforeNextText);
+    }
+}
+
+function initializeSkillsAnimation() {
+    const images = document.querySelectorAll('.skills img');
+    let delay = 600;
+    images.forEach((img, index) => {
+        let li = img.closest('li');
+        setTimeout(() => {
+            img.setAttribute('src', img.getAttribute('data-hover'));
+            li.classList.add('hover-effect');
+            setTimeout(() => {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                li.classList.remove('hover-effect');
+            }, 600);
+        }, index * delay);
+    });
+    setTimeout(() => {
+        images.forEach(img => {
+            let li = img.closest('li');
+            img.addEventListener('mouseover', function() {
+                this.setAttribute('src', this.getAttribute('data-hover'));
+                li.classList.add('hover-effect');
+            });
+            img.addEventListener('mouseout', function() {
+                this.setAttribute('src', this.getAttribute('data-src'));
+                li.classList.remove('hover-effect');
+            });
+        });
+    }, images.length * delay);
+}
+
+
+// Display of Project description
+
+document.addEventListener('DOMContentLoaded', function() {
+    var headers = document.querySelectorAll('#content_portfolio #project_box h3');
+
+    headers.forEach(function(header) {
+        header.addEventListener('click', function() {
+            var description = this.nextElementSibling;
+            
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        });
+    });
 });
