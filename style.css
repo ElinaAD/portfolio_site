@@ -45,9 +45,49 @@ p{
     display: flex;
     grid-area: content;
    margin-left: 2rem;
-    width: 100%;
+    width: 70%;
+    background-color: rgba(75, 74, 79, 0.3); /* or the background color of your choice */
+    padding: 20px; /* or any desired padding */
+    margin: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* optional: if you want rounded corners */
+}
   
-  }
+  blockquote {
+    position: relative;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    max-width: 60%; /* adjust based on preference */
+}
+
+blockquote:before {
+    content: '“';
+    font-size: 5rem;
+    position: absolute;
+    top: -50px; /* adjust based on preference */
+    left: -10px; /* adjust based on preference */
+    color: white;
+}
+
+
+
+
+h4 {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+}
   
   /* About Section  */
 
