@@ -103,3 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.querySelector('.nav_bar_toggle').addEventListener('click', function() {
+    var navList = document.querySelector('.nav_bar_list');
+    if (navList.style.display === 'none' || navList.style.display === '') {
+        navList.style.display = 'block';
+    } else {
+        navList.style.display = 'none';
+    }
+});

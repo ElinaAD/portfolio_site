@@ -4,9 +4,9 @@ body{
 display: grid;
     grid-template-areas:
     "nav nav"
-    "content profile"
-    "footer footer";
+    "content profile";
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
    background-color: rgba(28, 25, 33, 0.8);
    color: white;
    font-family: 'Barlow', sans-serif;
@@ -14,9 +14,8 @@ display: grid;
    letter-spacing: 0.08rem;
    min-height: 100vh; 
 }
-.footer{
-  font-size: 0.8rem;
-}
+
+
 h1{
   font-family: 'Cormorant', serif;
   font-size: 3rem;
@@ -32,179 +31,19 @@ p{
   line-height: 1.8rem;
 }
 
-/* Content Section  */
-
-.conent_container{
-  grid-area: content;
-  display: flex;
-  flex-direction: column;
-  max-height: 90%;
-  }
-
-  #content_home {
-    display: flex;
-    grid-area: content;
-   margin-left: 2rem;
-    width: 70%;
-    background-color: rgba(75, 74, 79, 0.3); /* or the background color of your choice */
-    padding: 20px; /* or any desired padding */
-    margin: 20px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.2);
-    border-radius: 5px; /* optional: if you want rounded corners */
-}
-  
-  blockquote {
-    position: relative;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding: 1rem 2rem;
-    background-color: transparent;
-    max-width: 60%; /* adjust based on preference */
-}
-
-blockquote:before {
-    content: '“';
-    font-size: 5rem;
-    position: absolute;
-    top: -50px; /* adjust based on preference */
-    left: -10px; /* adjust based on preference */
-    color: white;
-}
-
-
-
-
-h4 {
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-cite {
-    display: block;
-    text-align: right;
-    margin-top: 1rem;
-    font-style: italic;
-    color: rgba(255,255,255,0.8);
-}
-  
-  /* About Section  */
-
-#content_about{
-  align-items: center;
-  margin-left: 2rem;
-  max-width: 80%;
-}
-
-#content_about p{
-  text-align: justify;
-}
-
-  /* Profile Section  */
-
-.profile_section {
-  grid-area: profile;
-  display:flex;
-  flex-direction: row;
-  align-items:flex-start;
-    position: fixed;
-    right:0;
-    top: 10%;
-    height: 100vh; 
- 
-}
-
-
-
-#profile_img{
-  background-image: url('img_files/profile_img1.png');
-  background-size:contain;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-  height: 80%;
-  width: 40rem;
-  height: 32rem;
- 
-}
-
-/*Contact Section*/
-
-#content_contact {
-align-items: center;
-
-}
-
-
-#content_contact ul{
-  list-style-type: none;
-  display: flex;
-  flex-direction:column;
-}
-
-#content_contact li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#content_contact li img{
- 
-    list-style-type: none;
-    width:4rem;
-    height: 4rem;
-    text-align: center;
-    padding: 1rem 1rem;
-}
-
-#content_contact a{
-  color:white;
-  cursor: pointer;
-}
-
-
-/*Tyepewriter effect*/
-
-
-.profile_box h1{
-  font-size: 2.5rem;
-}
-
-.profile_box h2{
-  font-size: 1.5rem;
-}
-
-#profile_box h1,
-#profile_box h2 {  
-    white-space: nowrap;  
-    letter-spacing: .15em; 
-    margin: 0;
-    text-align: center;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(85, 134, 150); }
-}
-#typewriter.remove-cursor {
-  border-right: none;
-}
-
 /* Navigation Bar*/
 
+.nav_bar{
+  grid-area: nav;
+  max-height: 3rem;
+  margin-bottom: 1rem;
+}
 .nav_bar_list {
   grid-area: nav;
   grid-area: footer;
   max-width: fit-content;
-  max-height: 100%;
+  max-height: 3rem;
+  min-width: 40rem;
   overflow: hidden;
   padding: 0;
   margin: 0.5rem 0 0 1rem;
@@ -279,13 +118,185 @@ align-items: center;
 
 /* Nav Bar Display sections*/
 .content_container {
-  display: flex;
-  flex-direction: row;
+  grid-area: content;
+  
   
 }
 #content_about, #content_portfolio, #content_contact {
   display: none;
 }
+
+
+/* Content Section  */
+
+.conent_container{
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  max-height: 90%;
+  min-width: 40rem;
+  }
+/* Home Section  */
+
+  #content_home {
+    display: flex;
+    grid-area: content;
+   margin-left: 2rem;
+    width: 70%;
+    background-color: rgba(75, 74, 79, 0.3); 
+    padding: 20px; 
+    margin: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+}
+  
+  blockquote {
+    position: relative;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    max-width: 60%; 
+}
+
+blockquote:before {
+    content: '“';
+    font-size: 5rem;
+    position: absolute;
+    top: -50px; 
+    left: -10px; 
+    color: white;
+}
+
+
+
+
+h4 {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+}
+  
+  /* About Section  */
+
+#content_about{
+  align-items: center;
+  margin-left: 2rem;
+  max-width: 80%;
+}
+
+#content_about p{
+  text-align: justify;
+}
+
+  /* Profile Section  */
+
+.profile_section {
+  grid-area: profile;
+  display:flex;
+  flex-direction: row;
+  align-items:flex-start;
+    position: fixed;
+    right:0;
+    top: 10%;
+    height: 100vh; 
+ 
+}
+
+
+
+#profile_img{
+  background-image: url('img_files/profile_img1.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 80%;
+  width: 40rem;
+  height: 32rem;
+ 
+}
+
+
+/*Contact Section*/
+
+#content_contact {
+align-items: center;
+
+}
+
+
+#content_contact ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction:column;
+}
+
+#content_contact li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#content_contact li img{
+ 
+    list-style-type: none;
+    width:4rem;
+    height: 4rem;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+#content_contact a{
+  color:white;
+  cursor: pointer;
+}
+
+
+/*Tyepewriter effect in Profile Sextion*/
+
+
+.profile_box h1{
+  font-size: 2.5rem;
+}
+
+.profile_box h2{
+  font-size: 1.5rem;
+}
+
+#profile_box h1,
+#profile_box h2 {  
+    white-space: nowrap;  
+    letter-spacing: .15em; 
+    margin: 0;
+    text-align: center;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(85, 134, 150); }
+}
+#typewriter.remove-cursor {
+  border-right: none;
+}
+
 
 
 
@@ -404,4 +415,114 @@ align-items: center;
   
  }
 
+/*Adjustment for Media Screens */
 
+ @media only screen and (max-width: 1305px) {
+
+   
+#profile_img{
+  
+  width: 30rem;
+  height: 22rem;
+ 
+}
+
+.profile_section {
+
+    top: 5%;
+
+ 
+}
+#content_about{
+  max-width: 90%;
+}
+
+  }
+
+
+
+@media only screen and (min-width: 720px)and (max-width: 1305px){
+
+  body{
+    display: flex;
+       flex-direction: column;
+  }
+
+  .profile_section{
+
+    height: 30rem;
+  }
+
+  .skills ul{
+
+    padding: 0%;
+  }
+
+  .profile_section {
+    position: static;
+
+}
+
+
+.skills{
+  max-width: 8rem;
+}
+.skills img{
+  width: 2rem;
+  height: 2rem;
+}
+
+
+
+#content_about{
+  max-width: 80%;
+}
+}
+
+
+  @media only screen and (max-width: 720px){
+    body{
+      display: flex;
+         flex-direction: column;
+    }
+
+    .profile_section {
+      position: static;
+      height: fit-content;
+  
+  }
+
+   .nav_bar_toggle {
+    display: block;
+  }
+  .nav_bar {
+    max-height: none;
+    
+  }
+  
+  .nav_bar_list {
+    display: none; 
+    flex-direction: column; 
+   max-height: none;
+   min-width: 9rem;
+      position: absolute; 
+      top: 1.5rem; 
+      left: -1rem;
+      width: 2rem;
+      z-index: 1000; 
+      background-color: rgba(28, 25, 33, 0.7);
+  }
+  
+  .nav_bar_list a {
+    transition: none;
+   
+  
+  }
+  .nav_bar_list a::before, .nav_bar_list a::after {
+    display: none; 
+  }
+  
+  #content_about{
+  max-width: 80%;
+}
+}
